@@ -17,49 +17,49 @@ This too
 -----------------------------------------------------------
 Устанавливаем и настраиваем базу данных 
 
-`sudo apt install mysql-server`
+`sudo apt install mysql-server` <br/>
 password for root (DB): 1
 
--u = user, -p = password
+-u = user, -p = password <br/>
 `mysql -u root -p`
 
 
 `show databases;`
 
-set utf8 - кодировка БД 
-collate - способ сравнивания 
+> set utf8 - кодировка БД 
+> collate - способ сравнивания 
 > ...unicode_ci регистро-независимый поиск
+> flask-blog некорректное имя
 
-> flask-blog некорректное имя 
 `create database flask_blog character set utf8 collate utf8_unicode_ci;`
 
-выход из консоли mysql
+выход из консоли mysql <br/>
 `exit;`
 
 -----------------------------------------------------------
 
-Установка виртуального окружения 
+Установка виртуального окружения <br/>
 `virtualenv --python=python3.7 venv`
 
-активация
+активация <br/>
 `source venv/bin/activate`
 
 > (venv) username@comp-name:/folder/flask-blog
 
 
-деактивация
+деактивация <br/>
 `deactivate`
 
-проверка установленых пакетов \ библиотек 
+проверка установленых пакетов \ библиотек <br/>
 `pip freeze`
 
 
-cохранение зависимостей как `bundle` в ruby
-    pip freeze > requirements.txt (лучше не использовать ибо тянет глобальные зависимости)
-    `pip freeze --local > requirements.txt`
+cохранение зависимостей как `bundle` в ruby <br/>
+pip freeze > requirements.txt (лучше не использовать ибо тянет глобальные зависимости)<br/>
+`pip freeze --local > requirements.txt`
 
-Загрузка зависимостей как bundle install в ruby
-    `pip install -r requirements.txt`
+Загрузка зависимостей как bundle install в ruby<br/>
+`pip install -r requirements.txt`
 
 -----------------------------------------------------------
 
