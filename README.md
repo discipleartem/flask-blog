@@ -72,17 +72,74 @@ pip freeze > requirements.txt (лучше не использовать ибо �
 
 Lesson 3
 
-.../flask/app/
-`touch {config,app,main,view}.py`
-`pip install flask`
+cd .../flask/app/ <br/>
+`touch {config,app,main,view}.py` <br/>
+`pip install flask` <br/>
 
 
-repl and virtualenv
-не забыть установить `SublimeREPL` через `Package Control`
-https://www.youtube.com/watch?v=v3PIblL_Kq8
+repl and virtualenv<br/>
+не забыть установить `SublimeREPL` через `Package Control`<br/>
+https://www.youtube.com/watch?v=v3PIblL_Kq8<br/>
 
 -----------------------------------------------------------
 
 lesson 4
 
 https://youtu.be/oixGHKxv4y0?t=3
+
+используйте Bootstrap v. 3.3.*
+
+https://getbootstrap.com/docs/3.3/getting-started/
+
+Первоначальный шаблон
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Document</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div> <!-- navbar-header -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+				</ul>
+
+				<from class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div> <!-- form-group -->
+					<button type="submit" class="btn btn-default">Submit</button>
+				</from>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+				</ul>
+			</div> <!-- collapse navbar-collapse -->
+		</div> <!-- container-fluid -->
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<h2>Hello, {{ template_name }}</h2>
+		</div>
+	</div>
+
+</body>
+</html>
+```
