@@ -85,8 +85,6 @@ https://www.youtube.com/watch?v=v3PIblL_Kq8<br/>
 
 lesson 4
 
-https://youtu.be/oixGHKxv4y0?t=3
-
 используйте Bootstrap v. 3.3.*
 
 https://getbootstrap.com/docs/3.3/getting-started/
@@ -147,4 +145,20 @@ https://getbootstrap.com/docs/3.3/getting-started/
 -----------------------------------------------------------
 
 lesson 5
-https://youtu.be/Hkiy_eSvzIk
+
+в `url_for` передаем имя метода/функции из контроллера `view.py`
+`href="{{ url_for('index') }}`
+
+
+`href="{{ url_for('posts.index2') }}"`
+
+для нашего Blueprint /posts/templates/posts/index.html <br>
+мы указываем просто `posts` так как в `app/posts/blueprint.py` <br>
+мы обозначили имя ```Blueprint('posts'....``` <br>
+
+`.index2` имя метода/функции из контроллера `app/posts/blueprint.py` <br>
+
+-----------------------------------------------------------
+
+lesson 6
+
