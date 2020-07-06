@@ -1,6 +1,13 @@
 # from app.py импортируем переменную app
 from app import app
 import view
+from app import db
+
+# путь к файлу blueprint.py 
+from posts.blueprint import posts
+
+
+app.register_blueprint(posts, url_prefix='/blog')
 
 # включение режима отладки напрямую:
 # app.run(debug=True)

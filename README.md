@@ -162,3 +162,70 @@ lesson 5
 
 lesson 6
 
+активируем вирьуальное окружение перед установкой чего либо <br>
+`source venv/bin/activate` <br>
+									#==2.1.4 не загружаеться <br>
+`pip install flask-sqlalchemy mysql-connector` <br>
+
+
+https://pythex.org/
+
+работа в консоле python (venv)
+
+```
+import models
+from app import db
+db.create_all()
+
+```
+
+словил ошибку:
+
+```sqlalchemy.exc.NotSupportedError: (mysql.connector.errors.NotSupportedError) Authentication plugin 'caching_sha2_password' is not supported ```
+
+дописал `?auth_plugin=mysql_native_password`
+``` 'mysql:////myapp:password@localhost/mydatabase?auth_plugin=mysql_native_password' ```
+
+https://stackoverflow.com/questions/51802862/flask-sqlalchemy-missing-caching-sha2-password-authentication-module
+
+```
+from models import Post
+p = Post(title='First post', body='Forst post body')
+db.session.add(p)
+db.session.commit()
+p
+
+p1 = Post(title='Second post', body='Second post body')
+p1
+p.slug
+db.session.add(p1)
+db.session.commit()
+
+p2 = Post(title='Third post! 3-test', body='Third post body')
+db.session.add(p2)
+db.session.commit()
+p2.slug
+
+posts = Post.query.all()
+posts
+
+поиск по содержанию
+p2 = Post.query.filter(Post.title.contains('second')).all()
+p2
+
+точный поиск
+p3 = Post.query.filter(Post.title=='!').all()
+p3
+
+p3 = Post.query.filter(Post.title=='Third post! 3-test').all()
+
+p3 = Post.query.filter(Post.title=='Third post! 3-test').first
+
+p3
+
+```
+
+-----------------------------------------------------------
+
+lesson 7
+https://youtu.be/poz824J33yg
